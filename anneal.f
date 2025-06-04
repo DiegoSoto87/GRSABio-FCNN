@@ -16,7 +16,7 @@ C
 C CALLS: addang,energy,metropolis,outvar,outpdb,rgyr,setvar,zimmer
 C
 C ---------------------------------------------------------------
-C  SIMULACION CON LA FUNCION CAOTICA
+C  SIMULATION WITH THE CHAOTIC FUNCTION
 C ---------------------------------------------------------------
 
 C------------------------------------------
@@ -104,7 +104,7 @@ c ====================================================
           
 	deltamin = 10.0d0
     
-        currtem = 24599.5068258550d0 !Initial Temperature 1a13
+        currtem = 5990.5068258550d0 !Initial Temperature 1a13
         paro =  0.0000000126308167407501!Final Temperature (stop) 1a13	
 
 	temp_aureo = currtem*0.618
@@ -114,7 +114,7 @@ c ====================================================
 	temp_aureo4 = temp_aureo3*0.618
 
         alfa = 0.70
-	blmax = 360.0d0
+	blmax = 90.0d0
 
 	bbeta = 1.00073521131733 !1a13 parameter
 
@@ -166,11 +166,9 @@ c =================================================
           if (eol.LT.ymin) then
             ymin = eol
             write(*,*) 'MINIMA:', currtem, ymin
-
 c==================================================
 c   Stochastical Equilibrium
 c==================================================
-
 			if ((currtem.LT.val_pen).AND. (cnt.LT.3)) then
 				D = D + ymin
 				C = C + cnt * ymin
@@ -193,8 +191,6 @@ c				write(*,*) 'bye!!'
 			 endif			  
 
 			endif
-
-
 c ==================================
 c == Respaldo del punto minimo a  ==
 c == a idvrm, axvrm, vlvrm	    ==

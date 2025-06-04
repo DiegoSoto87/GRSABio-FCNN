@@ -11,22 +11,22 @@ c **************************************************************
        include 'INCL.H'
 
        dimension aux_vlvr(mxvr)
-       dimension o(30)
-       dimension fit(30)
-       dimension agent_energy(30)
-       dimension agent_vlvr(30,mxvr)
-       dimension positions(30,mxvr)
+       dimension o(10)
+       dimension fit(10)
+       dimension agent_energy(10)
+       dimension agent_vlvr(10,mxvr)
+       dimension positions(10,mxvr)
        dimension theBestVct(mxvr)
        dimension theWorstVct(mxvr)
        dimension vlvrBio(mxvr) 
-       dimension Vm(30,mxvr)     
+       dimension Vm(10,mxvr)     
        integer i,j,r,r1,r2,c,m,e_max,e_min
        integer Agents,Pc,Pm !!Agents
        integer getBinary,Maxiteration
        integer startIteration
        real*8 e,cauchy,walk,maxWorst,minBest,grsa2ener
 
-       Agents = 30
+       Agents = 10
        Maxiteration = 50
        !!write(*,*) "Bioinspired"
 c      Initialization
